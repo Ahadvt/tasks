@@ -1,40 +1,31 @@
 ﻿using System;
 
-namespace task_1
+namespace homework
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int lengthOFdoor = 300;
-            int widthOfdoor = 200;
-            int lengthOfwardrob = 200;
-            int widththOfwarrob = 100;
-            int sideLeftTop = 50;
-
-            if (lengthOFdoor > lengthOfwardrob && widthOfdoor > widththOfwarrob)
+            int Month = -13;
+            
+            if(Month>=2 && Month <=4)
             {
-                Console.WriteLine("true");
-            }else if (lengthOFdoor>lengthOfwardrob&&widthOfdoor>sideLeftTop)
+                Console.WriteLine("spring");
+            }else if(Month>=5 && Month <= 7)
             {
-                Console.WriteLine("true");
-            }else if (lengthOFdoor > sideLeftTop && widthOfdoor > widththOfwarrob)
+                Console.WriteLine("summer");
+            }else if(Month>=8 && Month <= 10)
             {
-                Console.WriteLine("true");
-            }else if (lengthOFdoor > widththOfwarrob && widthOfdoor > sideLeftTop)
+                Console.WriteLine("autmun");
+            }else if(Month==11 && Month>=0 && Month<=1)
             {
-                Console.WriteLine("true");
-            }else if (lengthOFdoor > widththOfwarrob && widthOfdoor > sideLeftTop)
-            {
-                Console.WriteLine("true");
-            }else if (lengthOFdoor > sideLeftTop && widthOfdoor > lengthOFdoor)
-            {
-                Console.WriteLine("true");
+                Console.WriteLine("winter");
             }
             else
             {
-                Console.WriteLine("false");
+                Console.WriteLine("bele bir ay veya fesil movcud deyil!!!");
             }
         }
     }
 }
+ 
