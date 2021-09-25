@@ -7,15 +7,13 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
 
-            ;
-
             Console.WriteLine(BooLean(100, 200, 300));
         }
 
        static bool BooLean(params int[] arr)
         {
             bool Check = true;
-            int n = 3000;
+            int n = 300;
             foreach (int item in arr)
             {
                 if (n==item)
