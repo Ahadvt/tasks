@@ -6,33 +6,35 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-
-            string arr = Console.ReadLine();
-
-            Compare(int.Parse(arr));
-           
+            
+                Console.WriteLine("The Largest Array"+" "+TheLargest(100, 200, 300, 500, 1000, 700));
         }
 
-        static void Compare( params int[] arr)
+        
+        static int TheLargest(params int[] arry)
         {
-
             int eb = 0;
-            
-            for (int i = 0; i<100; i++)
-                
+            foreach (int item in arry)
             {
-                if (arr[0] > eb)
+                if (item > eb)
                 {
-                    eb = arr[i];
+                    eb = item;
                 }
-
+                
             }
-            Console.WriteLine("en boyuk massiv"+"   "+eb);          
-            
-            
-            
-
+            return eb;
         }
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
