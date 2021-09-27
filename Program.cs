@@ -1,31 +1,34 @@
 ﻿using System;
 
-namespace homework
+namespace ConsoleApp5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int Month = -13;
-            
-            if(Month>=2 && Month <=4)
-            {
-                Console.WriteLine("spring");
-            }else if(Month>=5 && Month <= 7)
-            {
-                Console.WriteLine("summer");
-            }else if(Month>=8 && Month <= 10)
-            {
-                Console.WriteLine("autmun");
-            }else if(Month==11 && Month>=0 && Month<=1)
-            {
-                Console.WriteLine("winter");
-            }
-            else
-            {
-                Console.WriteLine("bele bir ay veya fesil movcud deyil!!!");
-            }
+            string word = "hello world";
+            ChangeAlfabi(word);
         }
+        static void ChangeAlfabi(string sentence)
+        {
+            string[] arry = sentence.Split(" ");
+
+            for (int i = 0; i < arry.Length; i++)
+            {
+                char[] word1 = arry[i].ToCharArray();
+                string word2 = string.Empty;
+
+                for (int z = word1.Length - 1; z >= 0; z--)
+                {
+                    word2 += word1[z];
+                }
+                Console.Write(word2);
+
+            }
+
+
+
+        }
+
     }
 }
- 
