@@ -1,5 +1,4 @@
 ﻿using System;
-using MachineGun;
 
 namespace ConsoleApp1
 {
@@ -7,9 +6,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Gun gun = new Gun();
-            Console.WriteLine("please choice mode for startin gun 'auto' or 'manual' ");
-            gun.UsingGun(Console.ReadLine());
+            Action<int> test1 = delegate (int num) 
+            {
+                if (num > 0)
+                {
+                    Console.WriteLine("number is a even");
+                }
+                else
+                {
+                    Console.WriteLine("number is e odd");
+                }
+            };
+            test1.Invoke(10);
+
+
+
         }
+
+        
+
+        
     }
 }
