@@ -1,45 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace MachineGun
+namespace ConsoleApp2
 {
-    public class Gun
+   public class Class1
     {
-        private int _bullet=1;
-        private int _gunmagazine = 30;
-        private string _auto = "auto";
-        private string _manual = "manual";
-        
+        public int Number;
 
-        
-        public void UsingGun(string UserRequest)
+        public Class1(int number)
         {
-            
-            if (UserRequest == _auto)
+            Number = number;
+        }
+
+
+
+        public event Action<bool> Check;
+
+        public void Getinfo()
+        {
+            if (Number % 2 == 0)
             {
-                    Console.WriteLine("you chosed auto mode all of the bullet shuted");
-                _gunmagazine--;
-
-                return;
-
-            }else if(UserRequest == _manual)
-            {
-                _gunmagazine--;
-
+                Check(true);
             }
-
             else
             {
-                Console.WriteLine("there are only 2 methods 'manual or auto'");
+                Check(false);
             }
-            
-            
-              
-            
-             
         }
-             
-        
+            
 
+        
 
     }
 }
