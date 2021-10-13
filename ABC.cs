@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -20,22 +20,23 @@ namespace ConsoleApp3
         {
             for (int i =2; i<=9; i++)
             {
-                if (Number % i == 0)
+                if (Number % i == 0) 
                 {
                     Count++;
 
-                    if (Count > 2)
+                    if (Count == 2)
                     {
                         Test(true);
                         break;
                     }
-                    else
-                    {
-                        Test(false);
-                    }
                 }
 
             }
+            if (Count==1)
+            {
+                Test(false);
+            }
+            
 
         }
     }
